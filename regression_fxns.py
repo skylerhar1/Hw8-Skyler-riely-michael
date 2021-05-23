@@ -7,6 +7,7 @@ import numpy as np
 import pandas as pd
 
 def make_standard_units(input_array):
+    #Skyler was here
     in_mean = np.mean(input_array)
     in_std = np.std(input_array)
     rms_array = [x-in_mean for x in input_array]
