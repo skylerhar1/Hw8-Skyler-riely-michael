@@ -4,13 +4,16 @@
 #import standard packages here
 
 import numpy as np
-
+import pandas as pd
 
 def make_standard_units(input_array):
-    '''Converts input_array to standard_units, where data has mean 0 and standard deviation of 1
-        INPUT: data array
-        OUTPUT: array in standard units'''
-
+'''Converts input_array to standard_units, where data has mean 0 and standard deviation of 1
+INPUT: data array
+OUTPUT: array in standard units'''
+    in_mean = np.mean(input_array)
+    in_std = np.std(input_array)
+    rms_array = [x-in_mean for x in input_array]
+    rms_array = rms_array/in_std
     
 def calc_corrcoef_from_standardized_input(array1,array2):
     '''Calculates Pearson correlation coefficient from two arrays in standard units
