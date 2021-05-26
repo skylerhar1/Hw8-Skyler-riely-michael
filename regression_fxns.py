@@ -9,6 +9,7 @@ import pandas as pd
 def make_standard_units(input_array):
     #Skyler was here
     #this is looking good so far
+    #mpg was late to the party again
     
     in_mean = np.mean(input_array)
     in_std = np.std(input_array)
